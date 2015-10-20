@@ -5,9 +5,9 @@
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
         <extension point="xbmc.addon.repository" name="NextGen Repo">
-            <info compressed="false">https://raw.github.com/toall1985/nextgenbuild/master/_repo/addons.xml</info>
-            <checksum>https://raw.github.com/toall1985/nextgenbuild/master/_repo/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.github.com/toall1985/nextgenbuild/master/_repo/</datadir>
+            <info compressed="false">https://raw.github.com/toall1985/next-gen/master/_repo/addons.xml</info>
+            <checksum>https://raw.github.com/toall1985/next-gen/master/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.github.com/toall1985/next-gen/master/_repo/</datadir>
             <hashes>false</hashes>
         </extension>
         <extension point="xbmc.addon.metadata">
@@ -19,7 +19,7 @@
 
 <addon
   id="skin.ccm.helixmod"
-  version="3.0.15"
+  version="3.0.16"
   name="CCM Helix Origin"
   provider-name="Mudislander modded by TA">
   <requires>
