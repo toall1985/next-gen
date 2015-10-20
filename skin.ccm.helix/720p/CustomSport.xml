@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1103" type="dialog">
+	<allowoverlay>no</allowoverlay>
+	<defaultcontrol always="true">92000</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>400</posx>
+		<posy>100</posy>
+	</coordinates>
+    <animation effect="slide" start="150,0" end="0,0" time="100">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="150,0" time="100">WindowClose</animation>
+    <controls>
+
+     
+        <control type="image">
+            <posx>0</posx>
+            <posy>188</posy>
+            <width>300</width>
+            <height>300</height>
+            <texture>background.jpg</texture>
+        </control>
+			
+        <control type="image" id="4100">
+            <posx>170</posx>
+            <posy>380</posy>
+            <width>150</width>
+            <height>80</height>
+            <aspectratio>keep</aspectratio>
+        </control>
+        <control type="label" id="4101">
+            <posx>20</posx>
+            <posy>50</posy>
+            <width>240</width>
+            <height>30</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>osdTitle</font>
+            <textcolor>ffffffff</textcolor>
+        </control>
+		<control type="button" id="92000">
+                    <description>JEKYLL AND HYDE SPORTS</description>
+                    <posx>0</posx>
+                    <posy>190</posy>
+                    <width>300</width>
+                    <height>30</height>
+					<onup>92007</onup>
+					<ondown>92001</ondown>
+					<onleft>Dialog.Close(1103)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]JEKYLL AND HYDE SPORTS[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.Jeckyll-Hyde/?fanart=http%3a%2f%2fkngt.x10host.com%2fLists%2fLogos%2fImages%2f&amp;mode=1&amp;name=Live%20Sports&amp;url=http%3a%2f%2fkngt.x10host.com%2fLists%2fLive_Sports%2fMenu.xml&quot;,return)</onclick>
+					<onclick>Dialog.Close(1103)</onclick>
+				</control>
+		<control type="button" id="92001">
+                    <description>PHOENIX SPORTS</description>
+                    <posx>0</posx>
+                    <posy>229</posy>
+                    <width>300</width>
+                    <height>30</height>
+					<onup>92000</onup>
+					<ondown>92002</ondown>
+					<onleft>Dialog.Close(1103)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]PHOENIX SPORTS[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.phstreams/?action=ndmode&amp;audio=0&amp;content=0&amp;fanart=http%3a%2f%2fs20.postimg.org%2fw4r6o7t3x%2fPhoenix_Fanart.png&amp;image=http%3a%2f%2fs20.postimg.org%2fy47sfmnfh%2fSports.png&amp;name=Sports&amp;playable=false&amp;tvshow=0&amp;url=http%3a%2f%2fshanghai.watchkodi.com%2fDirectories%2fSports.xml&quot;,return)</onclick>
+					<onclick>Dialog.Close(1103)</onclick>
+			   </control>
+		<control type="button" id="92002">
+                    <description>TODAYS LIVE EVENTS</description>
+                    <posx>0</posx>
+                    <posy>268</posy>
+                    <width>300</width>
+                    <height>30</height>
+					<onup>92001</onup>
+					<ondown>92003</ondown>
+					<onleft>Dialog.Close(1103)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]TODAYS LIVE EVENTS[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.OperationRobocopUltimate/?fanart&amp;mode=1&amp;name=%5bB%5d%5bCOLOR%20limegreen%5dTODAY%60S%20LIVE%20EVENTS%5b%2fCOLOR%5d%5b%2fB%5d%20&amp;url=http%3a%2f%2foperationrobocop.cf%2flists%2fppv%2flist.xml&quot;,return)</onclick>
+					<onclick>Dialog.Close(1103)</onclick>
+				</control>
+		<control type="button" id="92003">
+                    <description>SPORTS DEVIL LIVE</description>
+                    <posx>0</posx>
+                    <posy>307</posy>
+                    <width>300</width>
+                    <height>30</height>
+					<onup>92002</onup>
+					<ondown>92004</ondown>
+					<onleft>Dialog.Close(1103)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]SPORTS DEVIL LIVE[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.SportsDevil/?item=title%3dLive%2bSports%26url%3dlivesports.cfg%26definedIn%3dmainMenu.cfg%26director%3dSportsDevil%26genre%3dLive%2bSports%26type%3drss%26icon%3dC%253A%255CUsers%255CTony%255CAppData%255CRoaming%255CKodi%255Caddons%255Cplugin.video.SportsDevil%255Cresources%255Cimages%255Clivesports.png&amp;mode=1&quot;,return)</onclick>
+					<onclick>Dialog.Close(1103)</onclick>
+			   </control>
+		<control type="button" id="92004">
+                    <description>NJM SOCCER</description>
+                    <posx>0</posx>
+                    <posy>346</posy>
+                    <width>300</width>
+                    <height>30</height>
+					<onup>92003</onup>
+					<ondown>92005</ondown>
+					<onleft>Dialog.Close(1103)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]NJM SOCCER[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.NJMSoccer/&quot;,return)</onclick>
+					<onclick>Dialog.Close(1103)</onclick>
+                </control>
+		<control type="button" id="92005">
+                    <description>FOOTBALL FIXTURES</description>
+                    <posx>0</posx>
+                    <posy>385</posy>
+                    <width>300</width>
+                    <height>30</height>
+					<onup>92004</onup>
+					<ondown>92006</ondown>
+					<onleft>Dialog.Close(1103)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]FOOTBALL FIXTURES[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.footballfixtures/&quot;,return)</onclick>
+					<onclick>Dialog.Close(1103)</onclick>
+                </control>
+					<control type="button" id="92006">
+                    <description>FOOTBALL HIGHLIGHTS</description>
+                    <posx>0</posx>
+                    <posy>424</posy>
+                    <width>300</width>
+                    <height>30</height>
+					<onup>92005</onup>
+					<ondown>92007</ondown>
+					<onleft>Dialog.Close(1103)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]FOOTBALL HIGHLIGHTS[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.footballhighlightssubreddit/?mode=filtered_posts&quot;,return)</onclick>
+					<onclick>Dialog.Close(1103)</onclick>
+                </control>
+				<control type="button" id="92007">
+                    <description>MOTD</description>
+                    <posx>0</posx>
+                    <posy>463</posy>
+                    <width>300</width>
+                    <height>30</height>
+					<onup>92006</onup>
+					<ondown>92000</ondown>
+					<onleft>Dialog.Close(1103)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]MOTD[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.footballhighlightssubreddit/?mode=saved_search&amp;query=BBC%20Match%20of%20the%20Day&quot;,return)</onclick>
+					<onclick>Dialog.Close(1103)</onclick>
+                </control>
+
+        
+    </controls>
+</window>

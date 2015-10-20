@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">4308</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include condition="!Skin.HasSetting(InitialSetUpRun)">defaultInitialSetup</include>
+	<onload condition="!IsEmpty(Window(Home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
+	<onload condition="!IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
+	<onload condition="!IsEmpty(Window(Home).Property(SubMenuBackground))">ClearProperty(SubMenuBackground,Home)</onload>
+	<onload condition="!IsEmpty(Window(Home).Property(MenuBackground))">ClearProperty(MenuBackground,Home)</onload>
+	<onload condition="Skin.HasSetting(HolidayEffects) + System.Date(1-6,11-23)">Skin.Reset(HolidayEffects)</onload>
+	<onload condition="IsEmpty(Window.Property(PingAlarmSet)) + Skin.HasSetting(EnablePingWOL) + Skin.String(WOLPingTimer) + Skin.String(PingMacAddr)">AlarmClock(WOLPingAlarm,WakeOnLan($INFO[Skin.String(PingMacAddr)]),$INFO[Skin.String(WOLPingTimer)]:00,silent,loop)</onload>
+	<onload condition="Skin.HasSetting(EnablePingWOL) + Skin.String(WOLPingTimer) + Skin.String(PingMacAddr)">SetProperty(PingAlarmSet,1)</onload>
+	<onload condition="System.HasAddon(script.favourites)">XBMC.RunScript(script.favourites)</onload>
+	<onload condition="IsEmpty(Skin.String(WeatherFanartDir))">Skin.SetString(WeatherFanartDir,special://skin/extras/Weather/)</onload>
+	<onload condition="!Skin.HasSetting(DisableSlideShowArt) + IsEmpty(Window.Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + Library.HasContent(Movies)">XBMC.RunScript(script.randomandlastitems,type=Movie,limit=12,method=Random,playlist=special://skin/extras/Playlists/UnwatchedMovies.xsp,menu=UnWatched)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.1.Type,VideoPlayList) | Skin.String(HomeItem.1.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.1.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistOne)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.2.Type,VideoPlayList) | Skin.String(HomeItem.2.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.2.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTwo)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.3.Type,VideoPlayList) | Skin.String(HomeItem.3.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.3.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistThree)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.4.Type,VideoPlayList) | Skin.String(HomeItem.4.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.4.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistFour)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.5.Type,VideoPlayList) | Skin.String(HomeItem.5.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.5.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistFive)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.6.Type,VideoPlayList) | Skin.String(HomeItem.6.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.6.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistSix)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.7.Type,VideoPlayList) | Skin.String(HomeItem.7.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.7.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistSeven)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.8.Type,VideoPlayList) | Skin.String(HomeItem.8.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.8.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistEight)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.9.Type,VideoPlayList) | Skin.String(HomeItem.9.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.9.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistNine)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.10.Type,VideoPlayList) | Skin.String(HomeItem.10.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.10.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTen)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.11.Type,VideoPlayList) | Skin.String(HomeItem.11.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.11.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistEleven)</onload>
+	<onload condition="!Skin.HasSetting(DisableScriptPlaylist) + [Skin.String(HomeItem.12.Type,VideoPlayList) | Skin.String(HomeItem.12.Type,MusicPlayList)]">XBMC.RunScript(script.randomandlastitems,playlist=$INFO[Skin.String(HomeItem.12.Playlist)],method=$VAR[PlaylistSortOrder],limit=12,unwatched=False,resume=False,property=HomePlaylistTwelve)</onload>
+	<onload condition="!IsEmpty(Weather.Plugin) + !Weather.IsFetched">Weather.Refresh</onload>
+	<onload condition="Window.Previous(Startup)">Control.Move(9000,$INFO[Skin.String(InitialMenuItem)])</onload>
+	<controls>
+		<include condition="Skin.HasSetting(EnableHomeStats)">VideoNodeStatsList</include>
+		<include>CommonBackground</include>
+		<include condition="Skin.HasSetting(EnableRainDropEffect) | Skin.HasSetting(HolidayEffects)">AnimatedBackgroundEffect</include>
+		
+				
+				
+				<control type="button" id="99999">
+            		<description>reset skin</description>
+                    <posx>30</posx>
+                    <posy>290</posy>
+                    <width>100</width>
+                    <height>30</height>
+                    <textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>reset skin</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<onup>4324</onup>
+					<ondown>4309</ondown>
+					<onright>ActivateWindow(1101)</onright>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ReloadSkin()</onclick>
+                </control>
+				
+				<control type="image" id="99998">
+            		<description>image</description>
+                    <posx>650</posx>
+                    <posy>350</posy>
+                    <width>500</width>
+                    <height>300</height>
+                    <texture>transparent_text_effect.png</texture>
+				</control>
+				
+				<control type="button" id="4308">
+            		<description>TV</description>
+                    <posx>200</posx>
+                    <posy>290</posy>
+                    <width>200</width>
+                    <height>30</height>
+                    <textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]TV[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<onup>4324</onup>
+					<ondown>4309</ondown>
+					<onright>ActivateWindow(1101)</onright>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(1101)</onclick>
+                </control>
+				<control type="button" id="4309">
+                    <description>MOVIES</description>
+                    <posx>200</posx>
+                    <posy>330</posy>
+                    <width>200</width>
+                    <height>30</height>
+					<onup>4308</onup>
+					<ondown>4310</ondown>
+					<onright>ActivateWindow(1102)</onright>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]MOVIES[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(1102)</onclick>
+                </control>
+				<control type="button" id="4310">
+                    <description>SPORTS</description>
+                    <posx>200</posx>
+                    <posy>370</posy>
+                    <width>200</width>
+                    <height>30</height>
+					<onup>4309</onup>
+					<ondown>4325</ondown>
+					<onright>ActivateWindow(1103)</onright>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]SPORTS[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(1103)</onclick>
+                </control>
+				<control type="button" id="4311">
+                    <description>SEARCH</description>
+                    <posx>200</posx>
+                    <posy>450</posy>
+                    <width>200</width>
+                    <height>30</height>
+					<onup>4325</onup>
+					<ondown>4312</ondown>
+					<onright>ActivateWindow(1104)</onright>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]SEARCH[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(1104)</onclick>
+                </control>
+				<control type="button" id="4312">
+                    <description>ADD-ONS</description>
+                    <posx>200</posx>
+                    <posy>490</posy>
+                    <width>200</width>
+                    <height>30</height>
+					<onup>4311</onup>
+					<ondown>4313</ondown>
+					<onright>ActivateWindow(1105)</onright>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]ADD ONS[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(1105)</onclick>
+                </control>
+				<control type="button" id="4313">
+                    <description>MY FAVOURITES</description>
+                    <posx>200</posx>
+                    <posy>530</posy>
+                    <width>200</width>
+					<height>30</height>
+					<onright>ActivateWindow(favourites)</onright>
+                    <onup>4312</onup>
+					<ondown>4314</ondown>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]FAVOURITES[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(1112)</onclick>
+                </control>	
+					<control type="button" id="4314">
+                    <description>SETTINGS</description>
+                    <posx>200</posx>
+                    <posy>570</posy>
+                    <width>200</width>
+                    <height>30</height>
+					<onup>4313</onup>
+					<ondown>21</ondown>
+					<onright>ActivateWindow(1107)</onright>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]SETTINGS[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(1107)</onclick>
+                </control>
+				<control type="button" id="4315">
+                    <description>GENESIS</description>
+                    <posx>140</posx>
+                    <posy>20</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4330</onleft>
+					<onright>4316</onright>
+					<ondown>4324</ondown>
+					<onup>21</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>genesis.jpg</texturenofocus>
+					<onclick>RunAddon(plugin.video.genesis)</onclick>
+                </control>				
+				<control type="button" id="4316">
+                    <description>MUTTS NUTTS</description>
+                    <posx>242</posx>
+                    <posy>20</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4315</onleft>
+					<onright>4317</onright>
+					<ondown>4323</ondown>
+					<onup>21</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>muttsnutts.png</texturenofocus>
+					<onclick>RunAddon(plugin.video.mutttsnutz)</onclick>
+                </control>			
+				<control type="button" id="4317">
+                    <description>PHOENIX</description>
+                    <posx>344</posx>
+                    <posy>20</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4316</onleft>
+					<onright>4318</onright>
+					<ondown>4322</ondown>
+					<onup>21</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>phoenix.jpg</texturenofocus>
+					<onclick>RunAddon(plugin.video.phstreams)</onclick>
+                </control>			
+				<control type="button" id="4318">
+                    <description>UK TURKS</description>
+                    <posx>446</posx>
+                    <posy>20</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4317</onleft>
+					<onright>4319</onright>
+					<ondown>4321</ondown>
+					<onup>21</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>ukturks.jpg</texturenofocus>
+					<onclick>RunAddon(plugin.video.ukturk)</onclick>
+                </control>					
+				<control type="button" id="4319">
+                    <description>FTV</description>
+                    <posx>548</posx>
+                    <posy>20</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4318</onleft>
+					<onright>4326</onright>
+					<ondown>4320</ondown>
+					<onup>21</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>ftv.png</texturenofocus>
+					<onclick>RunAddon(plugin.video.F.T.V)</onclick>
+                </control>
+				<control type="button" id="4320">
+                    <description>SPORTS DEVIL</description>
+                    <posx>548</posx>
+                    <posy>122</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4321</onleft>
+					<onright>4335</onright>
+					<ondown>4308</ondown>
+					<onup>4319</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>sportsdevil.png</texturenofocus>
+					<onclick>RunAddon(plugin.video.SportsDevil)</onclick>
+                </control>
+				<control type="button" id="4321">
+                    <description>SPARKYS FOOTBALL HIGHLIGHTS</description>
+                    <posx>446</posx>
+                    <posy>122</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4322</onleft>
+					<onright>4320</onright>
+					<ondown>4308</ondown>
+					<onup>4318</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>sparkys.jpg</texturenofocus>
+					<onclick>RunAddon(plugin.video.footballhighlightssubreddit)</onclick>
+                </control>
+				<control type="button" id="4322">
+                    <description>NJM SOCCER</description>
+                    <posx>344</posx>
+                    <posy>122</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4323</onleft>
+					<onright>4321</onright>
+					<ondown>4308</ondown>
+					<onup>4317</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>njmsoccer.png</texturenofocus>
+					<onclick>RunAddon(plugin.video.NJMSoccer)</onclick>
+                </control>
+				<control type="button" id="4323">
+                    <description>YOUTUBE</description>
+                    <posx>242</posx>
+                    <posy>122</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4324</onleft>
+					<onright>4322</onright>
+					<ondown>4308</ondown>
+					<onup>4316</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>youtube.jpg</texturenofocus>
+					<onclick>RunAddon(plugin.video.youtube)</onclick>
+                </control>
+				<control type="button" id="4324">
+                    <description>ROBOCOP</description>
+                    <posx>140</posx>
+                    <posy>122</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4331</onleft>
+					<onright>4323</onright>
+					<ondown>4308</ondown>
+					<onup>4315</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>robocop.png</texturenofocus>
+					<onclick>RunAddon(plugin.video.OperationRobocopUltimate)</onclick>
+                </control>
+					<control type="button" id="4325">
+				    <description>MUSIC</description>
+                    <posx>200</posx>
+                    <posy>410</posy>
+                    <width>200</width>
+                    <height>30</height>
+					<onup>4310</onup>
+					<ondown>4311</ondown>
+					<onright>ActivateWindow(1111)</onright>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]MUSIC[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(1111)</onclick>
+				</control>
+				<control type="button" id="4326">
+                    <description>xunity maintainance</description>
+                    <posx>650</posx>
+                    <posy>20</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4319</onleft>
+					<onright>4327</onright>
+					<ondown>4335</ondown>
+					<onup>21</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>xunitytalk.jpg</texturenofocus>
+					<onclick>RunAddon(plugin.video.hubmaintenance)</onclick>
+                </control>
+				<control type="button" id="4327">
+                    <description>mucky ducks wizard</description>
+                    <posx>752</posx>
+                    <posy>20</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4326</onleft>
+					<onright>4328</onright>
+					<ondown>4334</ondown>
+					<onup>21</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>mucky ducks.jpg</texturenofocus>
+					<onclick>RunAddon(plugin.video.mdwizard)</onclick>
+                </control>
+				<control type="button" id="4328">
+                    <description>Jekyll and Hyde</description>
+                    <posx>854</posx>
+                    <posy>20</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4327</onleft>
+					<onright>4329</onright>
+					<ondown>4333</ondown>
+					<onup>21</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>jekyll.jpg</texturenofocus>
+					<onclick>RunAddon(plugin.video.Jeckyll-Hyde)</onclick>
+                </control>
+				<control type="button" id="4329">
+                    <description>Project Cypher</description>
+                    <posx>956</posx>
+                    <posy>20</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4328</onleft>
+					<onright>4330</onright>
+					<ondown>4332</ondown>
+					<onup>21</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>cypher.png</texturenofocus>
+					<onclick>RunAddon(plugin.video.ProjectCypher)</onclick>
+                </control>
+				<control type="button" id="4330">
+                    <description>Soap Catchup</description>
+                    <posx>1058</posx>
+                    <posy>20</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4329</onleft>
+					<onright>4315</onright>
+					<ondown>4331</ondown>
+					<onup>21</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>soap.jpg</texturenofocus>
+					<onclick>RunAddon(plugin.video.SoapCatchup)</onclick>
+                </control>
+				<control type="button" id="4331">
+                    <description>Stream All The Sources</description>
+                    <posx>1058</posx>
+                    <posy>122</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4332</onleft>
+					<onright>4324</onright>
+					<ondown>4308</ondown>
+					<onup>4330</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>salts.png</texturenofocus>
+					<onclick>RunAddon(plugin.video.salts)</onclick>
+                </control>
+				<control type="button" id="4332">
+                    <description>Stream Engine</description>
+                    <posx>956</posx>
+                    <posy>122</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4333</onleft>
+					<onright>4331</onright>
+					<ondown>4308</ondown>
+					<onup>4329</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>stream.png</texturenofocus>
+					<onclick>RunAddon(plugin.video.streamengine)</onclick>
+                </control>
+				<control type="button" id="4333">
+                    <description>The Football Fixtures</description>
+                    <posx>854</posx>
+                    <posy>122</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4334</onleft>
+					<onright>4332</onright>
+					<ondown>4308</ondown>
+					<onup>4328</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>fixtures.png</texturenofocus>
+					<onclick>RunAddon(plugin.video.footballfixtures)</onclick>
+                </control>
+				<control type="button" id="4334">
+                    <description>Mp3 Streams</description>
+                    <posx>752</posx>
+                    <posy>122</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4335</onleft>
+					<onright>4333</onright>
+					<ondown>4308</ondown>
+					<onup>4327</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>mp3streams.jpg</texturenofocus>
+					<onclick>RunAddon(plugin.audio.mp3streams)</onclick>
+                </control>
+				<control type="button" id="4335">
+                    <description>Ivue</description>
+                    <posx>650</posx>
+                    <posy>122</posy>
+                    <width>100</width>
+                    <height>100</height>
+					<onleft>4320</onleft>
+					<onright>4334</onright>
+					<ondown>4308</ondown>
+					<onup>4326</onup>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>ivue.jpg</texturenofocus>
+					<onclick>RunAddon(script.tvguidetecbox)</onclick>
+                </control>
+				
+				<control type="image">
+			<description>LOGO</description>
+			<left>10</left>
+			<top>5</top>
+			<width>120</width>
+			<height>49</height>
+			<aspectratio aligny="top" align="left">keep</aspectratio>
+			<texture>kodi-logo.png</texture>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<visible>IsEmpty(Skin.String(TopLeftHomeInfo)) | StringCompare(Skin.String(TopLeftHomeInfo),Logo)</visible>
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(infodialog)">Conditional</animation>
+		</control>
+		<include>HomeAddonsDisplay</include>
+		<control type="group">
+			<left>0</left>
+			<top>33r</top>
+			<visible>system.getbool(lookandfeel.enablerssfeeds) | [Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist) + !Skin.HasSetting(HideNextSongsInfo)]</visible>
+			<animation effect="slide" start="0,0" end="0,35" time="150" condition="Skin.HasSetting(HidePopUpSeekBar) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+			<include>Window_OpenClose_Animation</include>
+			<control type="rss">
+				<description>RSS feed</description>
+				<left>100</left>
+				<top>0</top>
+				<height>30</height>
+				<width>1145</width>
+				<font>font12</font>
+				<urlset>1</urlset>
+				<textcolor>$VAR[MainColorOne]</textcolor>
+				<titlecolor>$VAR[MainColorOne]</titlecolor>
+				<headlinecolor>white</headlinecolor>
+				<visible>!Skin.HasSetting(HideHomePowerBtn) + [!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
+			</control>
+			<control type="rss">
+				<description>RSS feed</description>
+				<left>55</left>
+				<top>0</top>
+				<height>30</height>
+				<width>1190</width>
+				<font>font12</font>
+				<urlset>1</urlset>
+				<textcolor>$VAR[MainColorOne]</textcolor>
+				<titlecolor>$VAR[MainColorOne]</titlecolor>
+				<headlinecolor>white</headlinecolor>
+				<visible>Skin.HasSetting(HideHomePowerBtn) + [!Player.HasAudio | IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(HideNextSongsInfo)]</visible>
+			</control>
+			<control type="image">
+				<description>RSS background</description>
+				<left>1250</left>
+				<top>2</top>
+				<width>24</width>
+				<height>24</height>
+				<texture>icon-rss.png</texture>
+			</control>
+		</control>
+		<control type="group" id="10">
+			<left>20</left>
+			<top>55r</top>
+			<include>Window_OpenClose_Animation</include>
+			<control type="button" id="20">
+				<description>Power push button</description>
+				<left>55</left>
+				<top>0</top>
+				<width>45</width>
+				<height>45</height>
+				<label>31003</label>
+				<font>-</font>
+				<onclick>$VAR[HomePowerBtnCommand]</onclick>
+				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<onleft>21</onleft>
+				<onright>21</onright>
+				<onup>4314</onup>
+				<ondown>4308</ondown>
+				<visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
+			</control>
+			<control type="image">
+				<description>Power Icon</description>
+				<left>60</left>
+				<top>5</top>
+				<width>35</width>
+				<height>35</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_power.png</texture>
+				<visible>!Skin.HasSetting(HideHomePowerBtn)</visible>
+			</control>
+			<control type="button" id="21">
+				<description>Favourites push button</description>
+				<left>0</left>
+				<top>0</top>
+				<width>45</width>
+				<height>45</height>
+				<label>1036</label>
+				<font>-</font>
+				<onclick>$VAR[FavBtnCommand]</onclick>
+				<texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<onleft>20</onleft>
+				<onright>20</onright>
+				<onup>4314</onup>
+				<ondown>4315</ondown>
+			</control>
+			<control type="image">
+				<description>Favourites Icon</description>
+				<left>5</left>
+				<top>5</top>
+				<width>35</width>
+				<height>35</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_favourites.png</texture>
+			</control>
+		</control>
+		<include>Clock</include>
+		<control type="label">
+			<description>Date label</description>
+			<right>12</right>
+			<top>40</top>
+			<width>200</width>
+			<height>15</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>font10</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[System.Date]</label>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-55" time="200" condition="Window.IsVisible(busydialog)">conditional</animation>
+			<visible>!Skin.HasSetting(HideSystemTime)</visible>
+		</control>
+	</controls>
+</window>

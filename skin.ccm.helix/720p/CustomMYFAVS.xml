@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1112" type="dialog">
+	<allowoverlay>yes</allowoverlay>
+	<defaultcontrol always="true">90100</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>400</posx>
+		<posy>100</posy>
+	</coordinates>
+    <animation effect="slide" start="150,0" end="0,0" time="100">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="150,0" time="100">WindowClose</animation>
+    <controls>
+
+     
+        <control type="image">
+            <posx>0</posx>
+            <posy>188</posy>
+            <width>250</width>
+            <height>300</height>
+            <texture>background.jpg</texture>
+        </control>
+			
+        <control type="image" id="4100">
+            <posx>170</posx>
+            <posy>380</posy>
+            <width>150</width>
+            <height>80</height>
+            <aspectratio>keep</aspectratio>
+        </control>
+        <control type="label" id="4201">
+            <posx>20</posx>
+            <posy>50</posy>
+            <width>240</width>
+            <height>30</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>osdTitle</font>
+            <textcolor>ffffffff</textcolor>
+        </control>
+		<control type="button" id="90100">
+                    <description>MY FAVOURITES</description>
+                    <posx>0</posx>
+                    <posy>190</posy>
+                    <width>250</width>
+                    <height>30</height>
+					<onup>90101</onup>
+					<ondown>90101</ondown>
+					<onleft>Dialog.Close(1109)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]MY FAVOURITES[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(favourites)</onclick>
+					<onclick>DIalog.Close(1112)</onclick>
+                </control>
+				<control type="button" id="90101">
+                    <description>GENESIS FAVOURITES</description>
+                    <posx>0</posx>
+                    <posy>230</posy>
+                    <width>250</width>
+                    <height>30</height>
+					<onup>91000</onup>
+					<ondown>91000</ondown>
+					<onleft>Dialog.Close(1109)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]GENESIS FAV'S[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.genesis/?action=myNavigator&quot;,return)</onclick>
+					<onclick>DIalog.Close(1112)</onclick>
+                </control>
+        
+    </controls>
+</window>

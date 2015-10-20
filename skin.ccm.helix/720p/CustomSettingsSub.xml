@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1107" type="dialog">
+	<allowoverlay>no</allowoverlay>
+	<defaultcontrol always="true">96000</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>400</posx>
+		<posy>100</posy>
+	</coordinates>
+	<animation effect="slide" start="150,0" end="0,0" time="100">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="150,0" time="100">WindowClose</animation>
+    <controls>
+
+     
+        <control type="image">
+            <posx>0</posx>
+            <posy>188</posy>
+            <width>250</width>
+            <height>310</height>
+            <texture>background.jpg</texture>
+        </control>
+			
+        <control type="image" id="4100">
+            <posx>170</posx>
+            <posy>380</posy>
+            <width>150</width>
+            <height>80</height>
+            <aspectratio>keep</aspectratio>
+        </control>
+        <control type="label" id="4101">
+            <posx>20</posx>
+            <posy>50</posy>
+            <width>240</width>
+            <height>30</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>osdTitle</font>
+            <textcolor>ffffffff</textcolor>
+        </control>
+		<control type="button" id="96000">
+                    <description>settings menu</description>
+                    <posx>0</posx>
+                    <posy>190</posy>
+                    <width>250</width>
+                    <height>30</height>
+					<onup>96003</onup>
+					<ondown>96001</ondown>
+					<onleft>Dialog.Close(1107)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]SETTINGS MENU[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(settings)</onclick>
+					<onclick>Dialog.Close(1107)</onclick>
+                </control>
+		<control type="button" id="96001">
+                    <description>File Manager</description>
+                    <posx>0</posx>
+                    <posy>230</posy>
+                    <width>250</width>
+                    <height>30</height>
+					<onup>96000</onup>
+					<ondown>96002</ondown>
+					<onleft>Dialog.Close(1107)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]FILE MANAGER[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(filemanager)</onclick>
+					<onclick>Dialog.Close(1107)</onclick>
+                </control>
+        <control type="button" id="96002">
+                    <description>XUNITY</description>
+                    <posx>0</posx>
+                    <posy>270</posy>
+                    <width>250</width>
+                    <height>30</height>
+					<onup>96001</onup>
+					<ondown>96003</ondown>
+					<onleft>Dialog.Close(1107)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]XUNITY[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>RunAddon(plugin.video.hubmaintenance)</onclick>
+					<onclick>Dialog.Close(1107)</onclick>
+                </control>
+        <control type="button" id="96003">
+                    <description>MUCKYS</description>
+                    <posx>0</posx>
+                    <posy>310</posy>
+                    <width>250</width>
+                    <height>30</height>
+					<onup>96002</onup>
+					<ondown>96000</ondown>
+					<onleft>Dialog.Close(1107)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]MUCKYS[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>RunAddon(plugin.video.mdwizard)</onclick>
+					<onclick>Dialog.Close(1107)</onclick>
+                </control>
+        
+    </controls>
+</window>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1111" type="dialog">
+	<allowoverlay>yes</allowoverlay>
+	<defaultcontrol always="true">99000</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>400</posx>
+		<posy>100</posy>
+	</coordinates>
+    <animation effect="slide" start="150,0" end="0,0" time="100">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="150,0" time="100">WindowClose</animation>
+    <controls>
+
+     
+        <control type="image">
+            <posx>0</posx>
+            <posy>188</posy>
+            <width>250</width>
+            <height>300</height>
+            <texture>background.jpg</texture>
+        </control>
+			
+        <control type="image" id="4100">
+            <posx>170</posx>
+            <posy>380</posy>
+            <width>150</width>
+            <height>80</height>
+            <aspectratio>keep</aspectratio>
+        </control>
+        <control type="label" id="4101">
+            <posx>20</posx>
+            <posy>50</posy>
+            <width>240</width>
+            <height>30</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>osdTitle</font>
+            <textcolor>ffffffff</textcolor>
+        </control>
+		<control type="button" id="99000">
+                    <description>uk.ireland radio</description>
+                    <posx>0</posx>
+                    <posy>190</posy>
+                    <width>250</width>
+                    <height>30</height>
+					<onup>99005</onup>
+					<ondown>99001</ondown>
+					<onleft>Dialog.Close(1111)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]UK/IRELAND RADIO[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.Jeckyll-Hyde/?fanart=http%3a%2f%2fkngt.x10host.com%2fLists%2fLogos%2fRadio_fanart1.jpg&amp;mode=1&amp;name=UK%2fIreland%20Live%20Radio&amp;url=http%3a%2f%2fkngt.x10host.com%2fLists%2fRadio%2fRadio.xml&quot;,return)</onclick>
+					<onclick>Dialog.Close(1111)</onclick>
+                </control>
+				<control type="button" id="99001">
+                    <description>RADIO</description>
+                    <posx>0</posx>
+                    <posy>230</posy>
+                    <width>250</width>
+                    <height>30</height>
+					<onup>99000</onup>
+					<ondown>99002</ondown>
+					<onleft>Dialog.Close(1111)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]RADIO[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.phstreams/?action=ndmode&amp;audio=0&amp;content=0&amp;fanart=http%3a%2f%2fs20.postimg.org%2fw4r6o7t3x%2fPhoenix_Fanart.png&amp;image=http%3a%2f%2fs20.postimg.org%2fiy6c2fmsd%2fRadio_Icon.png&amp;name=Radio&amp;playable=false&amp;tvshow=0&amp;url=http%3a%2f%2fshanghai.watchkodi.com%2fSections%2fMusic%2fRadio%2520Stations.xml&quot;,return)</onclick>
+					<onclick>Dialog.Close(1111)</onclick>
+                </control>
+				<control type="button" id="99002">
+                    <description>MUSIC TV</description>
+                    <posx>0</posx>
+                    <posy>270</posy>
+                    <width>250</width>
+                    <height>30</height>
+					<onup>99001</onup>
+					<ondown>99003</ondown>
+					<onleft>Dialog.Close(1111)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]MUSIC TV[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.phstreams/?action=ndmode&amp;audio=0&amp;content=0&amp;fanart=http%3a%2f%2fs20.postimg.org%2fw4r6o7t3x%2fPhoenix_Fanart.png&amp;image=http%3a%2f%2fs20.postimg.org%2fgfkn1r125%2fMusic_Icon.png&amp;name=Music%20TV&amp;playable=false&amp;tvshow=0&amp;url=http%3a%2f%2fshanghai.watchkodi.com%2fSections%2fMusic%2fMusic%2520Channels.xml&quot;,return)</onclick>
+					<onclick>Dialog.Close(1111)</onclick>
+                </control>
+				<control type="button" id="99003">
+                    <description>ARTISTS</description>
+                    <posx>0</posx>
+                    <posy>310</posy>
+                    <width>250</width>
+                    <height>30</height>
+					<onup>99002</onup>
+					<ondown>99004</ondown>
+					<onleft>Dialog.Close(1111)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]ARTISTS[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10501,&quot;plugin://plugin.audio.mp3streams/?iconimage=C%3a%5cUsers%5cTony%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.audio.mp3streams%5cart%2fartists.jpg&amp;list=artists%3c%3ehttp%3a%2f%2fmusicmp3.ru%2fartists.html%3c%3eC%3a%5cUsers%5cTony%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.audio.mp3streams%5cart%2fartists.jpg&amp;mode=21&amp;name=Artists&amp;type&amp;url=http%3a%2f%2fmusicmp3.ru%2fartists.html&quot;,return)</onclick>
+					<onclick>Dialog.Close(1111)</onclick>
+                </control>
+				<control type="button" id="99004">
+                    <description>TOP ALBUMS</description>
+                    <posx>0</posx>
+                    <posy>350</posy>
+                    <width>250</width>
+                    <height>30</height>
+					<onup>99003</onup>
+					<ondown>99005</ondown>
+					<onleft>Dialog.Close(1111)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]TOP ALBUMS[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10501,&quot;plugin://plugin.audio.mp3streams/?iconimage=C%3a%5cUsers%5cTony%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.audio.mp3streams%5cart%2ftopalbums.jpg&amp;list=top%20albums%3c%3ehttp%3a%2f%2fmusicmp3.ru%2fgenres.html%3c%3eC%3a%5cUsers%5cTony%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.audio.mp3streams%5cart%2ftopalbums.jpg&amp;mode=12&amp;name=Top%20Albums&amp;type&amp;url=http%3a%2f%2fmusicmp3.ru%2fgenres.html&quot;,return)</onclick>
+					<onclick>Dialog.Close(1111)</onclick>
+                </control>
+				<control type="button" id="99005">
+                    <description>NEW ALBUMS</description>
+                    <posx>0</posx>
+                    <posy>390</posy>
+                    <width>250</width>
+                    <height>30</height>
+					<onup>99004</onup>
+					<ondown>99000</ondown>
+					<onleft>Dialog.Close(1111)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]NEW ALBUMS[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>ActivateWindow(10501,&quot;plugin://plugin.audio.mp3streams/?iconimage=C%3a%5cUsers%5cTony%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.audio.mp3streams%5cart%2fnewalbums.jpg&amp;list=new%20albums%3c%3ehttp%3a%2f%2fmusicmp3.ru%2fnew_albums.html%3c%3eC%3a%5cUsers%5cTony%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.audio.mp3streams%5cart%2fnewalbums.jpg&amp;mode=12&amp;name=New%20Albums&amp;type&amp;url=http%3a%2f%2fmusicmp3.ru%2fnew_albums.html&quot;,return)</onclick>
+					<onclick>Dialog.Close(1111)</onclick>
+                </control>
+    </controls>
+</window>

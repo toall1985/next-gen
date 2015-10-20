@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1108" type="dialog">
+	<allowoverlay>no</allowoverlay>
+	<defaultcontrol always="true">97000</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>400</posx>
+		<posy>100</posy>
+	</coordinates>
+    <animation effect="slide" start="150,0" end="0,0" time="100">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="150,0" time="100">WindowClose</animation>
+    <controls>
+
+     
+        <control type="image">
+            <posx>250</posx>
+            <posy>188</posy>
+            <width>300</width>
+            <height>300</height>
+			<texture>background.jpg</texture>
+        </control>
+			
+        <control type="image" id="4100">
+            <posx>420</posx>
+            <posy>380</posy>
+            <width>150</width>
+            <height>80</height>
+            <aspectratio>keep</aspectratio>
+        </control>
+        <control type="label" id="4101">
+            <posx>250</posx>
+            <posy>50</posy>
+            <width>240</width>
+            <height>30</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>osdTitle</font>
+            <textcolor>ffffffff</textcolor>
+        </control>
+		<control type="button" id="97000">
+                    <description>FULL GUIDE</description>
+                    <posx>250</posx>
+                    <posy>190</posy>
+                    <width>300</width>
+                    <height>30</height>
+					<onup>97004</onup>
+					<ondown>97001</ondown>
+					<onleft>Dialog.Close(1108)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]FULL GUIDE[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>RunAddon(script.tvguidetecbox)</onclick>
+					<onclick>Dialog.Close(1108)</onclick>
+					<onclick>Dialog.Close(1101)</onclick>
+                </control>
+				<control type="button" id="97001">
+                    <description>SPORTS GUIDE</description>
+                    <posx>250</posx>
+                    <posy>230</posy>
+                    <width>300</width>
+                    <height>30</height>
+					<onup>97000</onup>
+					<ondown>97002</ondown>
+					<onleft>Dialog.Close(1108)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]SPORTS GUIDE[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>RunAddon(script.sporttvguidetecbox)</onclick>
+					<onclick>Dialog.Close(1108)</onclick>
+					<onclick>Dialog.Close(1101)</onclick>
+                </control>
+				<control type="button" id="97002">
+                    <description>KIDS GUIDE</description>
+                    <posx>250</posx>
+                    <posy>270</posy>
+                    <width>300</width>
+                    <height>30</height>
+					<onup>97001</onup>
+					<ondown>97003</ondown>
+					<onleft>Dialog.Close(1108)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]KIDS GUIDE[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>RunAddon(script.kidtvguidetecbox)</onclick>
+					<onclick>Dialog.Close(1108)</onclick>
+					<onclick>Dialog.Close(1101)</onclick>
+                </control>
+				<control type="button" id="97003">
+                    <description>MOVIES GUIDE</description>
+                    <posx>250</posx>
+                    <posy>310</posy>
+                    <width>300</width>
+                    <height>30</height>
+					<onup>97002</onup>
+					<ondown>97004</ondown>
+					<onleft>Dialog.Close(1108)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]MOVIES GUIDE[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>RunAddon(script.movietvguidetecbox)</onclick>
+					<onclick>Dialog.Close(1108)</onclick>
+					<onclick>Dialog.Close(1101)</onclick>
+                </control>
+				<control type="button" id="97004">
+                    <description>ENTERTAINMENT GUIDE</description>
+                    <posx>250</posx>
+                    <posy>350</posy>
+                    <width>300</width>
+                    <height>30</height>
+					<onup>97003</onup>
+					<ondown>97000</ondown>
+					<onleft>Dialog.Close(1108)</onleft>
+					<textcolor>ffffffff</textcolor>
+                    <font>smallfont</font>
+                    <label>[B]ENTERTAINMENT GUIDE[/B]</label>
+                    <aligny>center</aligny>
+                    <align>left</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+                    <texturenofocus>tvguide-program-grey.png</texturenofocus>
+					<onclick>RunAddon(script.entertainmenttvguidetecbox)</onclick>
+					<onclick>Dialog.Close(1108)</onclick>
+					<onclick>Dialog.Close(1101)</onclick>
+                </control>
+    </controls>
+</window>
